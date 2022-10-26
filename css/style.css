@@ -140,13 +140,13 @@
         }
         
         .main {
-            max-width: 80%;
+            max-width: 1024px;
             margin: 0 auto;
         }
         
         .post-header {
-            max-width: 55%;
-            font-size: 3.3em;
+            max-width: 50%;
+            font-size: 2.6em;
             line-height: 0.9em;
         }
         
@@ -202,6 +202,16 @@
         }
         /*MAIN 2ND PART*/
         
+        .flower {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: url('../img/rm191-nu-08.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding-top: 15em;
+        }
+        
         main article {
             max-width: 963px;
             margin: 0 auto;
@@ -215,5 +225,50 @@
             vertical-align: middle;
             min-height: 250px;
             margin: 1em;
+            text-align: center;
+            line-height: 1.6em;
         }
         /*footer*/
+        
+        @media (max-width:945px) {
+            .float-right {
+                display: none
+            }
+            .float-right img {
+                display: none
+            }
+            .post-header {
+                position: sticky;
+                background: rgba(0, 0, 0, 0.301);
+                max-width: 100%;
+                padding-left: 1em
+            }
+            .main {
+                background-image: url('../img/meh.svg');
+                background-repeat: no-repeat;
+                background-size: 327px;
+                background-position-x: right;
+            }
+            .post-header h1:hover,
+            .post-header h2:hover {
+                text-shadow: 3px 3px #ffffff85;
+            }
+        }
+        
+        @media (max-width:600px) {
+            .post-header {
+                font-size: 2em;
+            }
+            .main {
+                background-size: 252px
+            }
+            .post-header h1,
+            .post-header h2,
+            .post-header p {
+                color: white
+            }
+            .post-header h1:hover,
+            .post-header h2:hover {
+                text-shadow: 3px 3px #00000085;
+            }
+        }
