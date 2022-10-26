@@ -15,7 +15,14 @@
 <body>
     <header class="menu">
         <div class="navbar">
+            <div class="hidden-menu">
+                <div class="container" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
 
+                </div>
+            </div>
             <ul class="left">
                 <li> <a href="index.html">Domů</a> </li>
                 <li> <a href="about.html">O mně</a> </li>
@@ -131,7 +138,12 @@
             </ul>
         </div>
     </footer>
-</body>
 
+</body>
+<script>
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+</script>
 
 </html>
