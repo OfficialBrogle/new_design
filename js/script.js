@@ -23,3 +23,19 @@ $(selected).on('click', function() {
     $(this).toggleClass('active');
     event.preventDefault();
 })
+
+//MENU BUTTON
+
+function myFunction(x) {
+    x.classList.toggle("change");
+}
+
+//MENU DROPDOWN
+
+var menu = $('.hidden-menu');
+var menuClick = $('.container');
+var menuLi = $('.hidden-content');
+
+menuClick.on('click', function() {
+    menuLi.toggleClass('function')
+});
