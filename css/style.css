@@ -55,7 +55,7 @@
     }
     
     .container {
-        display: inline-block;
+        display: none;
         cursor: pointer;
         padding: 1em;
     }
@@ -423,6 +423,9 @@
         }
         .hidden-menu {
             display: block
+        }
+        .container {
+            display: inline-block;
         }
     }
     
