@@ -106,10 +106,6 @@
         height: 100%;
     }
     
-    .block {
-        display: block;
-    }
-    
     .flex {
         margin-top: 1em;
         display: flex;
@@ -273,10 +269,16 @@
     
     .float-right {
         float: right;
+        cursor: pointer;
     }
     
     .float-right img {
-        max-width: 540px;
+        max-width: 530px;
+        transition: all 1s;
+    }
+    
+    .float-right img:hover {
+        max-width: 540px
     }
     /*MAIN 2ND PART*/
     
@@ -355,6 +357,14 @@
     
     .nav-footer li:not(:last-child) a {
         margin-right: 2em;
+    }
+    
+    .block {
+        display: block;
+    }
+    
+    .z-index {
+        z-index: 2;
     }
     /*MEDIA QUERIES*/
     
