@@ -46,3 +46,26 @@ var menuLi = $('.hidden-content');
 menuClick.on('click', function() {
     menuLi.toggleClass('function')
 });
+
+// IMG CLICK
+
+var overlay = $('<div/>', { id: 'overlay' });
+overlay.appendTo('body').hide();
+
+$('.float-right').find('a').on('click', function(event) {
+
+    var href = $(this).attr('href'),
+        image = $('<img>', { src: href, alt: 'SVG meh' });
+
+    overlay.html(image).show();
+
+    event.preventDefault();
+});
+
+overlay.on('click', function() {
+    overlay.hide()
+});
+
+$(document).on('keyup', function() {
+    if (event.which === 27) overlay.hide();
+});
