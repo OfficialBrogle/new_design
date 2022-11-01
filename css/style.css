@@ -464,7 +464,7 @@ main article {
 .back-to-top {
     position: fixed;
     bottom: 50px;
-    right: 30px;
+    right: 0;
     z-index: 10;
     display: block;
     transition: all 0.5s;
@@ -508,12 +508,20 @@ main article {
 #dreams p {
     font-size: 1.1em;
     line-height: 1.3em;
+    padding: 0 1em
+}
+
+#who h1,
+#work h1,
+#hobby h1,
+#dreams h1 {
+    padding-top: 1em
 }
 
 #who,
 #work,
 #hobby {
-    margin-bottom: 5em;
+    margin-bottom: 4em;
 }
 
 

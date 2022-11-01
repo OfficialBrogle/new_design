@@ -47,7 +47,7 @@ menuClick.on('click', function() {
     menuLi.toggleClass('function')
 });
 
-// IMG CLICK
+// MEH SVG CLICK
 
 var overlay = $('<div/>', { id: 'overlay' });
 overlay.appendTo('body').hide();
@@ -70,7 +70,18 @@ $(document).on('keyup', function() {
     if (event.which === 27) overlay.fadeOut(300);
 });
 
-/*back to top arrow*/
+/*SCROLL SLOWER*/
+
+var menu = $('.inline-flex'),
+    menuLinks = menu.find('a');
+
+menuLinks.on('click', function(event) {
+
+    $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+    event.preventDefault();
+});
+
+/*BACK TO TOP*/
 
 var backToTop = $('<a>', {
     href: '#home',
@@ -79,6 +90,7 @@ var backToTop = $('<a>', {
 });
 
 backToTop
+    .hide()
     .appendTo('body')
     .on('click', function() {
         $('body').animate({ scroollTop: 0 })
@@ -88,4 +100,4 @@ var win = $(window);
 win.on('scroll', function() {
     if (win.scrollTop() >= 1000) backToTop.fadeIn();
     else backToTop.hide()
-})
+});
