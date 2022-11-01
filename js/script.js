@@ -93,11 +93,13 @@ backToTop
     .hide()
     .appendTo('body')
     .on('click', function() {
-        $('body').animate({ scroollTop: 0 })
+        $('html,body').animate({ scroollTop: 0 }, 1000);
+
     });
 
 var win = $(window);
-win.on('scroll', function() {
+win.on('scroll', function(event) {
     if (win.scrollTop() >= 1000) backToTop.fadeIn();
-    else backToTop.hide()
+    else backToTop.hide();
+
 });
