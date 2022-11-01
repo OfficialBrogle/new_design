@@ -103,3 +103,20 @@ win.on('scroll', function(event) {
     else backToTop.hide();
 
 });
+
+/*CAROUSEL*/
+
+var cover = $('#cover'),
+    covers = $('.fadecovers');
+
+covers.children(':not(:last)').hide();
+
+var sliderInterval = setInterval(function() {
+    covers.children(':last')
+        .fadeOut(1500, function() { $(this).prependTo(covers); })
+        .prev().fadeIn(1500);
+}, 2500);
+
+covers.on('mouseenter', function() {
+    clearInterval(sliderInterval);
+})

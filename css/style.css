@@ -474,6 +474,47 @@ main article {
     bottom: 58px
 }
 
+#cover {
+    position: relative;
+    background: url('../img/carousel/1.jpg') center no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: auto;
+    min-height: 775px;
+    margin: 0 auto;
+    border: 1em solid white;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+#cover .container2 {
+    position: relative;
+    z-index: 1;
+    min-height: 775px;
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 775px;
+}
+
+.fadecovers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 775px;
+    overflow: hidden
+}
+
+.container2 {
+    height: 100%;
+}
+
 
 /*ABOUT*/
 
