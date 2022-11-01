@@ -69,3 +69,23 @@ overlay.on('click', function() {
 $(document).on('keyup', function() {
     if (event.which === 27) overlay.fadeOut(300);
 });
+
+/*back to top arrow*/
+
+var backToTop = $('<a>', {
+    href: '#home',
+    class: 'back-to-top',
+    html: ' <img src="img/up-arrow.png" alt="">'
+});
+
+backToTop
+    .appendTo('body')
+    .on('click', function() {
+        $('body').animate({ scroollTop: 0 })
+    });
+
+var win = $(window);
+win.on('scroll', function() {
+    if (win.scrollTop() >= 1000) backToTop.fadeIn();
+    else backToTop.hide()
+})
