@@ -57,15 +57,15 @@ $('.float-right').find('a').on('click', function(event) {
     var href = $(this).attr('href'),
         image = $('<img>', { src: href, alt: 'SVG meh' });
 
-    overlay.html(image).show();
+    overlay.html(image).fadeIn(300);
 
     event.preventDefault();
 });
 
 overlay.on('click', function() {
-    overlay.hide()
+    overlay.fadeOut(300)
 });
 
 $(document).on('keyup', function() {
-    if (event.which === 27) overlay.hide();
+    if (event.which === 27) overlay.fadeOut(300);
 });
