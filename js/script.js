@@ -28,7 +28,7 @@ var selected = $('.left li a')
 $(selected).on('click', function() {
     $(selected).removeClass('active');
     $(this).toggleClass('active');
-    event.preventDefault();
+    //event.preventDefault();
 })
 
 //MENU BUTTON
