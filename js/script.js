@@ -3,22 +3,15 @@
         position: 'relative'
     };
 
-
-
-
 triple.css(style);
 
 triple.on('click', function() {
-    $(this).animate({ left: 1000 }, 2000).fadeOut(),
-        
+    $(this).animate({ left: 1000 }, 2000).fadeOut(),  
 
 });*/
 
-
-
-
-
-var treti = $('.left li').eq(2);
+/*Překlikávání stránek*/
+/*var treti = $('.left li').eq(2);
 var posledni = $('.left li:last-child');
 
 $('.left li').addClass('oznaceny');
@@ -29,7 +22,8 @@ $(selected).on('click', function() {
     $(selected).removeClass('active');
     $(this).toggleClass('active');
     //event.preventDefault();
-})
+})*/
+
 
 //MENU BUTTON
 
@@ -103,20 +97,3 @@ win.on('scroll', function(event) {
     else backToTop.hide();
 
 });
-
-/*CAROUSEL*/
-
-var cover = $('#cover'),
-    covers = $('.fadecovers');
-
-covers.children(':not(:last)').hide();
-
-var sliderInterval = setInterval(function() {
-    covers.children(':last')
-        .fadeOut(1500, function() { $(this).prependTo(covers); })
-        .prev().fadeIn(1500);
-}, 2500);
-
-covers.on('mouseenter', function() {
-    clearInterval(sliderInterval);
-})
