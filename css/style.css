@@ -482,8 +482,7 @@ main article {
     height: auto;
     min-height: 775px;
     margin: 0 auto;
-    border: 1em solid white;
-    border-radius: 2em;
+    border: 2em solid white;
     overflow: hidden;
 }
 
