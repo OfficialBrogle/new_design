@@ -55,10 +55,22 @@ covers.on('click', function() {
 
 
 /*ŠIPKY*/
-
+/*
 var arrowRight = $('.controls a');
+
+
+*/
+
+var arrows = $('.controls'),
+    arrowRight = $('.rightArrow a'),
+    arrowLeft = $('.leftArrow a');
 
 arrowRight.on('click', function(event) {
     covers.children(':last').fadeOut(750).prev().fadeIn();
     event.preventDefault();
+});
+
+arrowLeft.on('click', function(event) {
+    event.preventDefault();
+    covers.children(':first-child').appendTo(covers).fadeIn(750)
 });
