@@ -52,3 +52,13 @@ var Slider = {
 covers.on('click', function() {
     Slider.toggle();
 });
+
+
+/*ŠIPKY*/
+
+var arrowRight = $('.controls a');
+
+arrowRight.on('click', function(event) {
+    covers.children(':last').fadeOut(750).prev().fadeIn();
+    event.preventDefault();
+});

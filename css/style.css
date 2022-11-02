@@ -514,6 +514,14 @@ main article {
     height: 100%;
 }
 
+.controls {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 11;
+    margin-top: -64px;
+}
+
 
 /*ABOUT*/
 
