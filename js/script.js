@@ -97,3 +97,14 @@ win.on('scroll', function(event) {
     else backToTop.hide();
 
 });
+
+/*PŘILÉTNUTÍ ZE STRAN V ABOUT*/
+
+var newGallery = $('.inline-flex');
+//fadeClass = 'fadeIn' + aside.data('from').capitalize();
+
+newGallery.hide();
+
+
+$('.inline-flex:odd').show().addClass('fadeInRight');
+$('.inline-flex:even').show().addClass('fadeInLeft')

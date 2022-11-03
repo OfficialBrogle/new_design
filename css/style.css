@@ -328,18 +328,22 @@ main {
     background-size: contain;
     background-repeat: no-repeat;
     max-width: 100%;
-    max-height: 700px;
+    min-height: 700px;
     background-attachment: fixed;
 }
 
-.post-header-about {
+#post-header-about {
     margin: 0 auto;
     max-width: 80%
 }
 
-.post-header-about h1,
-.post-header-about h2,
-.post-header-about p {
+#post-header-about h2 {
+    margin-top: 5.3em;
+}
+
+#post-header-about h1,
+#post-header-about h2,
+#post-header-about p {
     max-width: 50%
 }
 
@@ -348,12 +352,18 @@ main {
     margin: 0 auto;
     text-align: center;
     padding: 1em;
+    font-size: 1.4em
 }
 
 .about-960 a,
 .about-960 h1 {
     text-transform: uppercase;
     color: black;
+}
+
+.about-960>h1 {
+    margin: 2em 0 0.67em 0;
+    font-size: 3em;
 }
 
 .inline-flex {
@@ -385,6 +395,12 @@ main {
     position: relative
 }
 
+.inline-flex a h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 3.6em;
+}
+
 .inline-flex a::before {
     content: "";
     position: absolute;
@@ -407,11 +423,6 @@ main {
     text-shadow: 1px 1px rgba(50, 212, 117, 0.507);
 }
 
-.inline-flex a h1 {
-    line-height: 1.4em;
-    margin-bottom: 0;
-}
-
 .inline-flex p {
     width: 70%;
     font-size: 1.4em;
@@ -423,13 +434,58 @@ main {
 }
 
 .inline-flex:nth-child(odd) p {
-    margin-right: 1em
+    margin-right: 1em;
 }
 
 .about-bigger {
-    font-size: 3em;
+    font-size: 2.1em;
     line-height: 1em;
     margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+
+/*Přilétnutí zleva a zprava*/
+
+.fadeInLeft,
+.fadeInRight {
+    -webkit-animation: 1s both ease-in-out;
+}
+
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-1000px);
+    }
+    20% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+}
+
+@-webkit-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(1000px);
+    }
+    20% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
 }
 
 
