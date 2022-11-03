@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;600;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="hidden-menu">
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="hidden-content">
+            <ul class="block">
+                <li> <a href="index.html">Domů</a> </li>
+                <li> <a href="about.html">O mně</a> </li>
+                <li> <a href="cv.html">Životopis</a> </li>
+                <li> <a href="contact.html">Kontakt</a> </li>
+            </ul>
+            <ul class="flex">
+                <li>
+                    <a href="http://instagram.com/barca_hubickova" target="blank">
+                        <img src="img/instagram.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/OfficialBrogle" target="blank">
+                        <img src="img/github.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:barcahubickovaa@gmail.com">
+                        <img src="img/email.png" alt="" class="email">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <header class="menu" id="home">
+        <div class="navbar">
+
+            <ul class="left">
+                <li> <a href="index.html">Domů</a> </li>
+                <li> <a href="about.html">O mně</a> </li>
+                <li> <a href="cv.html">Životopis</a> </li>
+                <li> <a href="contact.html" class="active">Kontakt</a> </li>
+            </ul>
+
+
+            <ul class="right">
+                <li>
+                    <a href="http://instagram.com/barca_hubickova" target="blank">
+                        <img src="img/instagram.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/OfficialBrogle" target="blank">
+                        <img src="img/github.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:barcahubickovaa@gmail.com">
+                        <img src="img/email.png" alt="" class="email">
+                    </a>
+                </li>
+                <li><a href="img/Barbora_Hubičková_cz_CV.pdf" download target="blank">Stáhnout CV</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="contact">
+        <div class="picture">
+            <div class="post-header post-header-contact">
+                <h2>Máš dotaz?</h2>
+                <h1>Zeptej se.</h1>
+                <p>Ozvu se ti co nejdřív. Jakékoliv spolupráce, případně nabídky či dotazy. Vše je vítáno!</p>
+                <p>Pokud chceš napsat recenzi, poznámky, pochvalu, kritiku, neváhej! Syp to na mě.</p>
+            </div>
+
+            <a href="#form"><img src="img/down-chevron.png" alt=""></a>
+
+        </div>
+    </main>
+
+    <div class="form">
+        <div id="form" class="group">
+
+            <form action="#" method="">
+                <div class="db">
+                    <input type="text" name="name" placeholder="Name Surname" id="name">
+                    <input type="email" name="email" placeholder="@" id="email">
+                    <input type="password" name="password" placeholder="Password" id="password">
+                    <input type="password" name="password" placeholder="Password" id="confirm_password">
+                </div>
+                <textarea name="message" rows="10" placeholder="Message"></textarea>
+                <input type="submit" value="Send message" id="submit">
+                <span id="notCorrect"></span>
+            </form>
+            <aside class="right">
+                <h1>Kontaktní informace</h1>
+                <p>
+                    Somewhere street<br> Badass Town 12345<br> Fucking state
+                </p>
+                <p>Phone:<a href="tel:123-456-789">123-456-789</a></p>
+                <p>Shop isn't exist so I don't have any opening hours. Or it's 24/7.</p>
+
+            </aside>
+        </div>
+    </div>
+
+    <footer class="menu">
+        <div class="navbar right-footer">
+
+            <ul class="nav-footer">
+                <li> <a href="index.html">Domů</a> </li>
+                <li> <a href="about.html">O mně</a> </li>
+                <li> <a href="cv.html">Životopis</a> </li>
+                <li> <a href="contact.html">Kontakt</a> </li>
+            </ul>
+        </div>
+
+
+    </footer>
+    <!-- scripts-->
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

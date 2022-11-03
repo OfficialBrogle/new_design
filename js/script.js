@@ -108,3 +108,26 @@ newGallery.hide();
 
 $('.inline-flex:odd').show().addClass('fadeInRight');
 $('.inline-flex:even').show().addClass('fadeInLeft')
+
+
+/* CONFIRM password FORM*/
+var submit = $('#submit'),
+    notCorrect = {
+        border: '2px solid #ff3d3d'
+    };
+
+
+console.log(submit)
+
+$(function() {
+    $(submit).click(function() {
+        var password = $('#password').val(),
+            confirm = $('#confirm_password').val();
+        if (password != confirm) {
+            $('#confirm_password').css(notCorrect);
+            return false
+        } else {
+            return true
+        }
+    })
+})
