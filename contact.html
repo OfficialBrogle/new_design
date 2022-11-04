@@ -92,16 +92,23 @@
     </main>
 
     <div class="form">
-        <div id="form" class="group">
-
-            <form action="#" method="">
-                <div class="db">
-                    <input type="text" name="name" placeholder="Name Surname" id="name">
-                    <input type="email" name="email" placeholder="@" id="email">
-                    <input type="password" name="password" placeholder="Password" id="password">
-                    <input type="password" name="password" placeholder="Password" id="confirm_password">
+        <div id="form" class="input_container group">
+            <form action="validation.html" id="formValidation" name="formValidation">
+                <div class="input-row">
+                    <input type="text" name="name" placeholder="Name Surname" id="name" required>
                 </div>
-                <textarea name="message" rows="10" placeholder="Message"></textarea>
+                <div class="input-row">
+                    <input type="email" name="email" placeholder="@" id="email" required>
+                </div>
+                <div class="input-row">
+                    <input type="password" name="password" placeholder="Password" id="password" required>
+                </div>
+                <div class="input-row">
+                    <input type="password" name="password" placeholder="Password" id="confirm_password" required>
+                </div>
+                <div class="input-row">
+                    <textarea name="message" rows="10" placeholder="Message" required></textarea>
+                </div>
                 <input type="submit" value="Send message" id="submit">
                 <span id="notCorrect"></span>
             </form>
@@ -112,7 +119,6 @@
                 </p>
                 <p>Phone:<a href="tel:123-456-789">123-456-789</a></p>
                 <p>Shop isn't exist so I don't have any opening hours. Or it's 24/7.</p>
-
             </aside>
         </div>
     </div>

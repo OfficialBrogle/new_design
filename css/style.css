@@ -49,7 +49,8 @@ li {
     max-width: 100%;
     padding: 0;
     margin: 0;
-    background: black
+    background: black;
+    padding-bottom: 1em;
 }
 
 .hidden-menu {
@@ -514,6 +515,37 @@ main {
 }
 
 
+/*Validation*/
+
+.valid-main {
+    margin: 0 auto;
+    margin-top: -2em;
+    background-image: url('../img/sukulent.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-y: bottom;
+    background-color: #e7fffd;
+    min-height: 850px;
+    width: 100%;
+}
+
+.validation {
+    max-width: 80%;
+    max-height: 50%;
+    margin: 0 auto;
+    padding-top: 15em;
+    text-align: center;
+}
+
+.validation h1 {
+    font-size: 5em;
+}
+
+.validation p {
+    font-size: 3em
+}
+
+
 /*MAIN 2ND PART*/
 
 .flower {
@@ -667,17 +699,7 @@ main article {
     height: 100%;
     text-align: center;
     background: #C2F2FF;
-    /* margin-top: -3em; */
     padding: 3em 0 10em 0;
-}
-
-#form {
-    position: relative;
-    background: linear-gradient(90deg, black, #121212, black);
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 3em;
-    margin-bottom: 3em;
 }
 
 form input {
@@ -700,8 +722,9 @@ form input:nth-child(3) {
     margin-right: 1em;
 }
 
-.db {
-    display: block;
+.input-row {
+    display: inline-block;
+    box-shadow: 10px solid #41b9ff;
 }
 
 form {
@@ -713,6 +736,7 @@ form {
 form textarea {
     display: inline-block;
     margin: 0 auto;
+    margin-left: -15px;
     width: 420px;
     padding: 1em;
     background-color: #A5E8A5;
@@ -740,6 +764,15 @@ form>input:hover {
     background: linear-gradient(#a18dc4, #d078ed);
 }
 
+#form {
+    position: relative;
+    background: linear-gradient(90deg, black, #121212, black);
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
 #form .right {
     max-width: 400px;
     display: inline-block;
@@ -754,6 +787,13 @@ form>input:hover {
 #form .right p {
     color: #86a8b1;
     margin-bottom: 1.5em
+}
+
+laber.error {
+    font-weight: 700;
+    display: block;
+    color: white;
+    font-size: 14px;
 }
 
 

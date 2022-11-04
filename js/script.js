@@ -115,19 +115,36 @@ var submit = $('#submit'),
     notCorrect = {
         border: '2px solid #ff3d3d'
     };
+var nameForm = $('#name');
 
-
-console.log(submit)
+console.log($('#password'));
+console.log($('#name'));
 
 $(function() {
     $(submit).click(function() {
         var password = $('#password').val(),
             confirm = $('#confirm_password').val();
+
         if (password != confirm) {
             $('#confirm_password').css(notCorrect);
             return false
         } else {
+            $('#confirm_password').remove(notCorrect);
             return true
         }
     })
+});
+
+
+
+$('#formValidation').validate({
+
+    rules: {
+        name: {
+            minlength: 2
+        }
+    },
+    submitHandler: function(form) {
+        form.submit();
+    }
 })
