@@ -41,6 +41,8 @@ menuClick.on('click', function() {
     menuLi.toggleClass('function')
 });
 
+
+
 // MEH SVG CLICK
 
 var overlay = $('<div/>', { id: 'overlay' });
@@ -117,8 +119,6 @@ var submit = $('#submit'),
     };
 var nameForm = $('#name');
 
-console.log($('#password'));
-console.log($('#name'));
 
 $(function() {
     $(submit).click(function() {
@@ -134,17 +134,3 @@ $(function() {
         }
     })
 });
-
-
-
-$('#formValidation').validate({
-
-    rules: {
-        name: {
-            minlength: 2
-        }
-    },
-    submitHandler: function(form) {
-        form.submit();
-    }
-})
