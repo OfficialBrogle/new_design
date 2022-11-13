@@ -138,28 +138,34 @@ $(function() {
 /*CONTACT CIRCLE SVG*/
 
 var progress = document.querySelector('.progress'),
-    textarea = document.querySelector('textarea');
+    textarea = document.querySelector('textarea'),
+    counter = document.querySelector('.counter');
 
-var pathLength = progress.getAttribute('r') *2 * Math.PI,
-    textLength = 100;
-
+var pathLength = progress.getAttribute('r') * 2 * Math.PI,
+    textLength = 500,
+    warn = Math.floor(textLength * (2 / 3)),
+    danger = Math.floor(textLength * (4 / 5));
 
 
 progress.style.strokeDasharray = pathLength + 'px';
 progress.style.strokeDashoffset = pathLength + 'px';
 
-textarea.addEventListener ('input', function(event){
+textarea.addEventListener('input', function(event) {
 
     var len = textarea.value.length,
         per = len / textLength;
-        
 
-    if (len <= textLength ) {
+
+    if (len <= textLength) {
         let newOffset = pathLength - (pathLength * per) + 'px';
         progress.style.strokeDashoffset = newOffset;
 
+        progress.classList.toggle('warn', len > warn && len < danger);
+        progress.classList.toggle('danger', len >= danger);
+        progress.classList.toggle('tragedy', len == textLength);
     }
-    
-    
-})
 
+    counter.textContent = textLength - len;
+    counter.classList.toggle('danger', len >= textLength);
+
+})

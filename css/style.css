@@ -745,7 +745,15 @@ form textarea {
     font-weight: 600;
     border-radius: 1em;
     border: none;
+    resize: vertical;
 }
+
+.counter {
+    position: relative;
+    top: -40px;
+    left: 173px;
+}
+
 
 /*SVG*/
 
@@ -756,30 +764,48 @@ form textarea {
     margin-bottom: 4px;
 }
 
-svg circle{ 
+svg circle {
     fill: none;
     stroke-width: 1;
 }
 
 .underlay {
-    stroke: #959595;
+    color: #959595;
 }
 
 .progress {
-    stroke: #1da1f2;
-    stroke-width:3
+    color: #1da1f2;
+    stroke-width: 3;
+    transition: .2s stroke ease-in-out;
+}
+
+.tragedy {
+    stroke-width: 5;
+    animation: blink .4s ease-out;
+}
+
+@keyframes blink {
+    0% {
+        stroke-width: 5
+    }
+    10% {
+        stroke-width: 10
+    }
+    100% {
+        stroke-width: 5
+    }
 }
 
 .safe {
-    stroke: #1da1f2
+    color: #1da1f2
 }
 
 .warn {
-    stroke: orange
+    color: orange
 }
 
 .danger {
-    stroke: red
+    color: red;
 }
 
 form>input {
