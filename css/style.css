@@ -736,7 +736,7 @@ form {
 form textarea {
     display: inline-block;
     margin: 0 auto;
-    margin-left: -15px;
+    margin-left: 35px;
     width: 420px;
     padding: 1em;
     background-color: #A5E8A5;
@@ -745,6 +745,41 @@ form textarea {
     font-weight: 600;
     border-radius: 1em;
     border: none;
+}
+
+/*SVG*/
+
+.input-row svg {
+    position: relative;
+    left: -55px;
+    transform: rotate(-90deg);
+    margin-bottom: 4px;
+}
+
+svg circle{ 
+    fill: none;
+    stroke-width: 1;
+}
+
+.underlay {
+    stroke: #959595;
+}
+
+.progress {
+    stroke: #1da1f2;
+    stroke-width:3
+}
+
+.safe {
+    stroke: #1da1f2
+}
+
+.warn {
+    stroke: orange
+}
+
+.danger {
+    stroke: red
 }
 
 form>input {
@@ -787,6 +822,10 @@ form>input:hover {
 #form .right p {
     color: #86a8b1;
     margin-bottom: 1.5em
+}
+
+input[type=submit] {
+    margin-right: 40px;
 }
 
 laber.error {
@@ -878,13 +917,13 @@ laber.error {
     .float-right img {
         display: none
     }
-    .post-header {
+    .post-header-main {
         position: sticky;
         background: rgba(0, 0, 0, 0.301);
         max-width: 100%;
         padding-left: 1em
     }
-    .main {
+    .main-home {
         background-image: url('../img/meh.svg');
         background-repeat: no-repeat;
         background-size: 327px;
@@ -949,11 +988,20 @@ laber.error {
     }
 }
 
+@media (max-width:610px) {
+    .input-row svg {
+        display: none;
+    }
+    form textarea {
+        margin-left: -15px
+    }
+}
+
 @media (max-width:600px) {
     .post-header {
         font-size: 2em;
     }
-    .main {
+    .main-home {
         background-size: 252px
     }
     .post-header h1,

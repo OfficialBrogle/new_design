@@ -134,3 +134,32 @@ $(function() {
         }
     })
 });
+
+/*CONTACT CIRCLE SVG*/
+
+var progress = document.querySelector('.progress'),
+    textarea = document.querySelector('textarea');
+
+var pathLength = progress.getAttribute('r') *2 * Math.PI,
+    textLength = 100;
+
+
+
+progress.style.strokeDasharray = pathLength + 'px';
+progress.style.strokeDashoffset = pathLength + 'px';
+
+textarea.addEventListener ('input', function(event){
+
+    var len = textarea.value.length,
+        per = len / textLength;
+        
+
+    if (len <= textLength ) {
+        let newOffset = pathLength - (pathLength * per) + 'px';
+        progress.style.strokeDashoffset = newOffset;
+
+    }
+    
+    
+})
+

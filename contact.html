@@ -107,7 +107,11 @@
                     <input type="password" name="password" placeholder="Password" id="confirm_password" required>
                 </div>
                 <div class="input-row">
-                    <textarea name="message" rows="10" placeholder="Message" required></textarea>
+                    <textarea name="message" rows="10" placeholder="Message" required autofocus>  </textarea>
+                    <svg height="50" width="50">
+                        <circle class="underlay" cx="22" cy="22" r="20"></circle>
+                        <circle class="progress" cx="22" cy="22" r="20"></circle>
+                    </svg>
                 </div>
                 <input type="submit" value="Send message" id="submit">
                 <span id="notCorrect"></span>
